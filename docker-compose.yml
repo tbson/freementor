@@ -1,0 +1,22 @@
+version: '2'
+
+networks:
+    proxy:
+        external:
+            name: common_proxy
+
+services:
+    nginx:
+        container_name: nginx
+        build:
+            context: ./
+        restart: always
+        volumes:
+            - ./conf.d:/etc/nginx/conf.d
+            - ./ssl:/resource/ssl
+        ports:
+            - "80:80"
+            - "443:443"
+        networks:
+            - proxy
+
