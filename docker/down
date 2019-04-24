@@ -1,0 +1,7 @@
+NGINX=../../../docker/nginx
+
+rm -rf $NGINX/conf.d/freementor.conf
+docker-compose -f $NGINX/docker-compose.yml restart
+
+docker-compose down
+

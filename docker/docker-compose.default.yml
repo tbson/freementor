@@ -1,0 +1,57 @@
+version: '2.1'
+
+networks:
+    proxy:
+        external:
+            name: common_proxy
+
+services:
+    __app_name___db:
+        container_name: __app_name___db
+        image: 'postgres:11.1'
+        environment:
+            - POSTGRES_USER=docker
+            - POSTGRES_PASSWORD=docker
+            - POSTGRES_DB=docker
+        ports:
+            - '5433:5432'
+        volumes:
+            # - ./db.sql:/docker-entrypoint-initdb.d/db.sql
+            - ./dbdata:/var/lib/postgresql/data/:delegated
+        healthcheck:
+            test: ['CMD-SHELL', 'pg_isready -U docker']
+            interval: 10s
+            timeout: 5s
+            retries: 5
+        networks:
+            - proxy
+
+    __app_name___api:
+        container_name: __app_name___api
+        build:
+            context: ../api
+            dockerfile: ../docker/dockerfiles/api
+        volumes:
+            - ../api:/code:delegated
+        depends_on:
+            __app_name___db:
+                condition: service_healthy
+        networks:
+            - proxy
+        # command: bash -c "python manage.py migrate && gunicorn core.wsgi -b 0.0.0.0:8001"
+        tty: true
+
+    __app_name___client:
+        container_name: __app_name___client
+        build:
+            context: ../client
+            dockerfile: ../docker/dockerfiles/client
+        working_dir: /code
+        ports:
+            - '3000:3000'
+        volumes:
+            - ../client:/code:delegated
+            - /code/node_modules
+        networks:
+            - proxy
+        tty: true

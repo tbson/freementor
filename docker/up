@@ -1,0 +1,8 @@
+NGINX=../../../docker/nginx
+
+cp nginx.conf $NGINX/conf.d/freementor.conf
+docker-compose -f $NGINX/docker-compose.yml restart
+
+docker-compose up -d
+
+# docker-compose logs -f

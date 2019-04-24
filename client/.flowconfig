@@ -1,0 +1,16 @@
+[ignore]
+.*/node_modules/draft-js/.*
+.*/node_modules/rc-editor-core/.*
+.*/node_modules/config-chain/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper='^src' ->'<PROJECT_ROOT>/src'
+esproposal.optional_chaining=enable
+
+[version]

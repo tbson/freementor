@@ -1,0 +1,7 @@
+if [[ $1 ]]; then
+    ./api_exec coverage run --source='.' manage.py test apps.$1
+else
+    ./api_exec coverage run --source='.' manage.py test apps
+fi
+
+# ./exec coverage html

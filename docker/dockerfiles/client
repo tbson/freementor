@@ -1,0 +1,16 @@
+FROM node:carbon
+
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+
+RUN mkdir /code
+RUN rm -rf /code/node_modules
+RUN mkdir /code/node_modules
+
+WORKDIR /code
+
+COPY package.json .
+
+RUN yarn cache clean
+RUN yarn --ignore-engines
+
+COPY . .

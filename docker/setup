@@ -1,0 +1,23 @@
+# setup appname newdomain.com pro
+# setup appname newdomain.com dev
+
+NGINX_CONFIG=nginx.conf
+DJANGO_CONFIG_PATH=../api/core/
+DJANGO_CONFIG="${DJANGO_CONFIG_PATH}env.py"
+
+# Config nginx
+cp "nginx.conf.$3" $NGINX_CONFIG
+sed -i -e 's/my\.domain/'"$2"'/g' $NGINX_CONFIG
+sed -i -e 's/__app_name__/'"$1"'/g' $NGINX_CONFIG
+rm -f "${NGINX_CONFIG}-e"
+
+# Config django
+cp "${DJANGO_CONFIG_PATH}env.default.py" $DJANGO_CONFIG
+sed -i -e 's/my\.domain/'"$2"'/g' $DJANGO_CONFIG
+sed -i -e 's/__app_name__/'"$1"'/g' $DJANGO_CONFIG
+rm -f "${DJANGO_CONFIG}-e"
+
+# Config docker compose
+cp docker-compose.default.yml docker-compose.yml
+sed -i -e 's/__app_name__/'"$1"'/g' docker-compose.yml
+rm -f docker-compose.yml-e

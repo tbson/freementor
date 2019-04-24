@@ -1,0 +1,2 @@
+./yarn build-back
+scp -r ../client/build/*.js tbson@docker_server:/home/tbson/code/24ho/api/public/clients/source/

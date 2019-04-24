@@ -1,0 +1,9 @@
+LOG:  database system was shut down at 2017-12-24 18:29:01 +07
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+FATAL:  terminating autovacuum process due to administrator command
+LOG:  shutting down
+LOG:  database system is shut down

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <!-- Facebook OpenGraph tags -->
+        <meta property="og:title" content="{{ META.title }}" />
+        <meta property="og:description" content="{{ META.description|striptags }}" />
+
+        <meta property="og:url" content="{{ BASE_URL_TRIM }}{{ request.get_full_path }}" />
+        <meta property="og:image" content="{{ MEDIA_URL }}{{ META.image }}" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:article:author" content="{{ DEFAULT_META.title }}" />
+        <meta property="og:locale" content="vi_VN" />
+        <meta property="og:site_name" content="{{ DEFAULT_META.title }}" />
+        <meta name="author" content="{{ DEFAULT_META.title }}">
+
+        <meta name="description" content="{{ META.description|striptags }}">
+        <title>{{ meta.title }}</title>
+    </head>
+    <body></body>
+</html>
