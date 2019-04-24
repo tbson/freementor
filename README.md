@@ -1,10 +1,10 @@
 Sắp xếp cấu trúc các folder như sau:
 
-Giả sử ta có 1 folder chứa tất cả những thứ liên quan đến code nằm tại: `/home/someuser/code`
+Giả sử ta có 1 folder chứa tất cả những thứ liên quan đến code nằm tại: `~/code`
 
-Folder chứa `nginx` sẽ nằm tại: `/home/someuser/code/nginx`
+Folder chứa `nginx` sẽ nằm tại: `~/code/docker/nginx`
 
-Folder chứa dự án chuẩn bị chạy sẽ nằm tại: `/home/someuser/web/freementor`, `freementor` có thể là bất kì tên gì chúng ta muốn dùng.
+Folder chứa dự án chuẩn bị chạy sẽ nằm tại: `~/code/web/freementor`, `freementor` có thể là bất kì tên gì chúng ta muốn dùng.
 
 
 Bước 1 setup:
