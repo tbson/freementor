@@ -11,7 +11,7 @@ service nào thì nên vào port nào ví dụ như:
 
 ```
 - https://192.168.1.11:8000 // For service 1
-- https://192.168.1.11:8001 / For service 2
+- https://192.168.1.11:8001 // For service 2
 ```
 
 Thì chúng ta có thể gộp cả Nginx vào cùng 1 file `docker-compose.yml`, vì nằm chung 1 file `docker-compose` nên các service
