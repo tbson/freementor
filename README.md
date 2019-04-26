@@ -16,6 +16,7 @@ knowledge about any programming language).
 
 We welcome everyone who needs mentorship, let's get contact.
 
-| Mentor   | Exps                                                                          | No. Of mentee | Contact                                  |
-| -------- | ----------------------------------------------------------------------------- | ------------- | ---------------------------------------- |
-| Son Tran | `JS`/`React`/`Python`/`Django`/`Linux` <br/> Prerequires: Basic `JS`/`Python` | `0` / `2`     | [https://tbson.info](https://tbson.info) |
+| Mentor    | Exps                                                                          | No. Of mentee | Contact                                             |
+| --------- | ----------------------------------------------------------------------------- | ------------- | --------------------------------------------------- |
+| Son Tran  | `JS`/`React`/`Python`/`Django`/`Linux` <br/> Prerequires: Basic `JS`/`Python` | `5` / `5`     | [https://tbson.info](https://tbson.info)            |
+| Huy Duong | `IoT`/`Data engineer`/`System Admin`/`System architecture design`             | `0` / `5`     | [mailto:qhuy.duong@gmail.com](qhuy.duong@gmail.com) |
